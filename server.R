@@ -18,10 +18,14 @@ shinyServer(function(input, output) {
 				  mutate(x = bound(x), y=bound(y))
 				
 				# scatterplot
-				ggplot(xy.corr, aes(x=x, y=y)) + geom_point() +
-					  theme(axis.text.x=element_blank(),
-							axis.text.y=element_blank()) + theme_minimal() +
-					    ylim(c(-.5,.5)) + xlim(c(-.5,.5))
+				ggplot(xy.corr, aes(x=x, y=y)) + geom_point() + 
+				  theme_minimal() + ylim(c(-.5,.5)) + xlim(c(-.5,.5)) +
+				  theme(axis.text.x=element_blank(), axis.text.y=element_blank())
+				  
+				  
+				  
+				    
+				  
 					  
 		})
 
